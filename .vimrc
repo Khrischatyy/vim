@@ -22,6 +22,14 @@ Plug 'rking/ag.vim'
 "colorschemes
 Plug 'morhetz/gruvbox'
 
+" Вырубаем .swp и ~ (резервные) файлы
+set nobackup
+set noswapfile
+
+" Кодировка файлов по умолчанию
+set encoding=utf-8 
+set fileencodings=utf8,cp1251"
+
 call plug#end()
 syntax on
 let g:mapleader=','
@@ -35,5 +43,11 @@ set hlsearch
 set incsearch
  
 "mappings
-map <C-n> :NERDTreeToggle<CR>
+noremap <leader>n :NERDTreeFocus<CR>
+" Открыть NERDTree работает на компе  
+nnoremap <C-f> :NERDTreeFind<CR>
+" Открыть NERDTree работает на маке / map <C-[> :NERDTreeToggle<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+
+
 map <Leader>  <Plug>(easymotion-prefix)
