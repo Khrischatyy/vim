@@ -33,6 +33,8 @@ set fileencodings=utf8,cp1251"
 call plug#end()
 syntax on
 let g:mapleader=','
+" CTRL-P будет искать и среди .files (.env)
+let g:ctrlp_show_hidden=1
 colorscheme gruvbox
 set background=dark
 set number
